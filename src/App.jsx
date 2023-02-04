@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import './App.css';
 import UserList from './components/Users/userList';
 import AddUser from './components/Users/AddUser';
@@ -15,10 +15,10 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <Fragment>
       <AddUser onAddUser={addUserHandler} />
       <UserList users={usersList} />
-    </div>
+    </Fragment>
   );
 }
 
