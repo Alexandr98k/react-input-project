@@ -10,9 +10,8 @@ function App() {
     //використовуємо такий трюк з функцією всередині сетЮзерЛіст, адже потрібно, щоб новий стейт базувався на попередньому
     console.log(userName, userAge);
     setUsersList((prevUserList) => {
-      return [...prevUserList, { name: userName, age: userAge, id: Math.random().toString() }];
+      return [...prevUserList, { name: userName, age: userAge, id: (Date.now() + '').slice(-10) }];
     });
-    console.log(usersList);
   };
 
   return (
